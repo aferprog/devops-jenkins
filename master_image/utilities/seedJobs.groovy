@@ -23,7 +23,7 @@ freeStyleJob(jobTitle.join('/')) {
     parameters {
         gitParameter {
             name('BRANCH')
-            defaultValue('master')
+            defaultValue('main')
             description('Branch or tag to use for seedJobs')
             type(gitType)
             branch('')
@@ -38,7 +38,7 @@ freeStyleJob(jobTitle.join('/')) {
     scm {
         git {
             remote {
-                github('zvieriev-kostiantyn/devops', 'https')
+                github('aferprog/devops-jenkins', 'https')
             }
             branches('${BRANCH}')
         }
